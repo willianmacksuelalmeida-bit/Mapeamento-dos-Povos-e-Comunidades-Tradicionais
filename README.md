@@ -28,6 +28,7 @@ WebGIS para o mapeamento das casas de matriz africana e de religiosidade afro-in
 | Terreiros | Pontos dos registros | Levantamento de campo do projeto |
 | Municípios de Alagoas | 102 limites municipais | Malha territorial do IBGE |
 | Microrregiões de Alagoas | 13 microrregiões | Malha territorial do IBGE |
+| Mesorregiões de Alagoas | 3 mesorregiões | Malha territorial do IBGE |
 | Estados do Nordeste | 9 unidades federativas | Malha territorial do IBGE |
 | Nomes dos municípios | Rótulos | Derivado da malha municipal |
 
