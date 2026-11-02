@@ -2,7 +2,7 @@
 
 WebGIS para o mapeamento das casas de matriz africana e de religiosidade afro-indígena no estado de Alagoas.
 
-> **Versão de teste.** O mapa reúne as primeiras 126 respostas do questionário de campo, com a pesquisa ainda em andamento. Os números mudam à medida que novos questionários forem incorporados.
+> **Versão de teste.** O mapa reúne 235 terreiros, das 239 respostas do questionário de campo recebidas até 2 de novembro de 2026, com a pesquisa ainda em andamento. Os números mudam à medida que novos questionários forem incorporados.
 
 **Realização:** Secretaria de Estado dos Direitos Humanos (SEDH – AL) e Universidade Estadual de Alagoas (UNEAL).
 
@@ -64,10 +64,23 @@ Os registros vêm do formulário do Google Forms aplicado pelas equipes de campo
 Na conversão da planilha de respostas:
 
 - os nomes de municípios foram padronizados contra a lista oficial do IBGE;
-- as coordenadas foram lidas em graus decimais, graus-minutos-segundos, Plus Code e links do Google Maps, e conferidas contra o limite do município declarado;
+- as coordenadas foram lidas em graus decimais, graus-minutos-segundos e Plus Code, e os links curtos do Google Maps foram abertos para ler a coordenada do destino; tudo foi conferido contra o limite do município declarado;
+- quando não havia coordenada legível, o terreiro foi localizado pelo endereço com o serviço de busca do OpenStreetMap (Nominatim): primeiro pela rua — aceita só se a rua encontrada estiver no mesmo bairro informado no formulário —, depois pelo conjunto ou bairro;
+- os terreiros foram cruzados com o Cadastro Nacional de Endereços para Fins Estatísticos (CNEFE) do Censo 2022, do IBGE, que registra cada endereço com coordenada e identifica os estabelecimentos religiosos pelo nome: pelo nome, para confirmar coordenadas e localizar casas sem coordenada; e pelo número do imóvel, que o OpenStreetMap quase nunca tem;
 - as respostas de múltipla escolha e os campos numéricos foram normalizados, e os casos ambíguos foram listados para conferência.
 
-**Localização.** Terreiros sem coordenada legível aparecem numa posição aproximada dentro do município, com o marcador em anel tracejado. O filtro "Localização" e a opção "Precisão da localização" em "Colorir pontos por" mostram quais são.
+**Localização.** Cada terreiro tem um de quatro níveis de precisão, indicado pelo marcador e descrito na ficha:
+
+| Nível | Origem | Marcador | Terreiros |
+|---|---|---|---|
+| Coordenada exata | Coordenada informada, link do Google Maps ou estabelecimento religioso de mesmo nome no CNEFE | Cheio | 186 |
+| Pelo endereço | Número do imóvel no CNEFE (11) ou rua no OpenStreetMap (6) | Borda pontilhada | 17 |
+| Pelo bairro | Centro do bairro ou conjunto informado | Anel tracejado | 18 |
+| Aproximada no município | Sem coordenada nem endereço localizável | Anel tracejado | 14 |
+
+Catorze terreiros têm a coordenada confirmada pelo registro do Censo 2022; a ficha mostra o nome e o endereço registrados pelo IBGE.
+
+O filtro "Localização" e a opção "Precisão da localização" em "Colorir pontos por" mostram cada grupo. Pontos que caíram no mesmo lugar foram levemente afastados para não se sobreporem.
 
 **Situação do registro.** "Completo" indica que a resposta não tem pendências que afetem o mapa ou as estatísticas; "Com pendências" indica o contrário. A lista de pendências de cada registro aparece no topo da sua ficha.
 
@@ -96,6 +109,8 @@ A localização de casas de religião de matriz africana é informação sensív
 ## Créditos
 
 Limites territoriais: Instituto Brasileiro de Geografia e Estatística (IBGE).
+Busca de endereços: Nominatim, sobre dados © colaboradores do OpenStreetMap.
+Cadastro de endereços e estabelecimentos religiosos: CNEFE, Censo Demográfico 2022, IBGE.
 Mapas base: Esri, HERE, Garmin, INCREMENT P, Maxar, Earthstar Geographics e colaboradores do OpenStreetMap.
 
 Secretaria de Estado dos Direitos Humanos de Alagoas (SEDH – AL)
