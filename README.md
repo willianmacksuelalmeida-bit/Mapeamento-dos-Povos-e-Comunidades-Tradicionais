@@ -20,6 +20,8 @@ WebGIS para o mapeamento das casas de matriz africana e de religiosidade afro-in
 - Abre, para cada terreiro, uma ficha completa com as respostas organizadas por módulo.
 - Reúne a lista completa em tabela ordenável, com ligação direta ao ponto no mapa.
 - Oferece formulário resumido para registro de casas ainda não mapeadas.
+- Permite baixar os dados em planilha (.xlsx ou .csv) pelo item **BAIXAR DADOS** do menu: os terreiros em exibição no mapa, com os filtros aplicados, ou a base completa.
+- Permite baixar as estatísticas pelo botão **Baixar estatísticas**, no painel ESTATÍSTICAS, escolhendo o que baixar (a aba aberta, todas as abas do recorte atual ou todas as abas da base completa) e o formato: **PDF** com os gráficos como aparecem no site, ou **planilha** com a tabela de cada gráfico — quantidade, percentual e base do cálculo — e o gráfico ao lado.
 
 ## Camadas disponíveis
 
@@ -42,7 +44,7 @@ Todo o sistema está em um único arquivo `index.html`. Não há servidor, banco
 
 Isso significa que qualquer hospedagem de arquivos estáticos serve — GitHub Pages, um servidor da universidade ou até um pendrive.
 
-**Bibliotecas usadas** (carregadas por CDN): Leaflet 1.9, Leaflet.markercluster 1.5 e Leaflet.heat 0.2.
+**Bibliotecas usadas** (carregadas por CDN): Leaflet 1.9, Leaflet.markercluster 1.5, Leaflet.heat 0.2 e, só no momento do download, SheetJS 0.18, ExcelJS 4.4 e jsPDF 2.5. As bibliotecas de download são buscadas no cdnjs e, se ele falhar, no jsDelivr; sem acesso a nenhum dos dois, as planilhas saem em CSV.
 
 ---
 
